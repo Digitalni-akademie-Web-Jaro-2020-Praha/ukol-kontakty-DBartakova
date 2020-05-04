@@ -1,10 +1,86 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
 body {
-	font-family: sans-serif;
-	font-size: 14px;
+  display: flex;
+  font-family: sans-serif;
+  font-size: 14px;
+  justify-content: center;
 }
 
 /* ---------------------------------------------------- */
+
+.teamSite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 330px;
+}
+
+/* .blondataAUsmevava,
+.kratkovlasaAUsmevava {
+	display: flex;
+} */
+.blondata,
+.kUsmevava,
+.kratkovlasa,
+.lUsmevava {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1.5px solid beige;
+  border-radius: 3%;
+  padding: 15px;
+  margin: 10px;
+}
+
+img {
+  border-radius: 50%;
+  margin: 10px;
+}
+
+@media screen and (min-width: 540px) and (max-width: 959px) {
+  .teamSite {
+    flex: 0 0 100%;
+  }
+
+  .blondataAUsmevava,
+  .kratkovlasaAUsmevava {
+    display: flex;
+  }
+
+  .blondata,
+  .kUsmevava,
+  .kratkovlasa,
+  .lUsmevava {
+    flex-direction: row;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .teamSite {
+    flex: 0 0 100%;
+  }
+  .ourTeam {
+    display: flex;
+    flex-direction: row;
+  }
+  .blondataAUsmevava,
+  .kratkovlasaAUsmevava {
+    display: flex;
+  }
+}
